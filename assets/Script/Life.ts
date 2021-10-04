@@ -2,7 +2,7 @@ import { weightRandom } from './functions/util'
 import Property from './property';
 import Event from './event';
 import { ITalentData, TalentManager, talentMgr } from './Talent';
-import Achievement from './achievement';
+import { Achievement, IListAchievementData } from './achievement';
 import ConfigManager from './Utils/ConfigManager';
 
 interface ITalentReplacementInfo {
@@ -179,7 +179,7 @@ class LifeManager {
         return this._talent.exclusive(talents, exclusive);
     }
 
-    getAchievements() {
+    getAchievements(): IListAchievementData[] {
         const ticks = {};
         this._property
             .get(this._property.TYPES.ACHV)

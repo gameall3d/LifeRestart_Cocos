@@ -1,0 +1,74 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "1a83d182-4ae4-4710-85f8-5ea7d3dd6623",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "1a83d182-4ae4-4710-85f8-5ea7d3dd6623@6c48a",
+      "displayName": "round-frame",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "1a83d182-4ae4-4710-85f8-5ea7d3dd6623",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "1a83d182-4ae4-4710-85f8-5ea7d3dd6623@f9941",
+      "displayName": "round-frame",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 39,
+        "height": 25,
+        "rawWidth": 39,
+        "rawHeight": 25,
+        "borderTop": 10,
+        "borderBottom": 10,
+        "borderLeft": 12,
+        "borderRight": 14,
+        "packable": true,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "1a83d182-4ae4-4710-85f8-5ea7d3dd6623@6c48a",
+        "atlasUuid": ""
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "hasAlpha": true,
+    "redirect": "1a83d182-4ae4-4710-85f8-5ea7d3dd6623@f9941"
+  }
+}

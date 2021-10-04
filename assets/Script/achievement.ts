@@ -3,6 +3,16 @@ import { checkCondition } from './functions/condition';
 import { eventMsg } from './Utils/EventMessage';
 import { Message } from './Defines';
 
+interface IListAchievementData {
+    id: number;
+    name: string;
+    opportunity: number;
+    description: string;
+    hide: number;
+    grade: number;
+    isAchieved: boolean;
+}
+
 class Achievement {
     constructor() {}
 
@@ -24,7 +34,7 @@ class Achievement {
         return Object.keys(this.#achievements).length;
     }
 
-    list(property) {
+    list(property): IListAchievementData[] {
         return Object
             .values(this.#achievements)
             .map(({
@@ -66,4 +76,5 @@ class Achievement {
     }
 }
 
-export default Achievement;
+export { Achievement };
+export type{ IListAchievementData };

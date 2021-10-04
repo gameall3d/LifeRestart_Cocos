@@ -4,6 +4,7 @@ import { Message } from './Defines';
 import { lifeMgr } from './Life';
 import { ITalentInfo } from './Talent';
 import { AchievementHint } from './UI/AchievementHint';
+import { AchievementPanel } from './UI/AchievementPanel';
 import { DistributePropPanel } from './UI/DistributePropPanel';
 import { LifeTrackPanel } from './UI/LifeTrackPanel';
 import { SelectTalentPanel } from './UI/SelectTalentPanel';
@@ -25,9 +26,14 @@ export class GameManager extends Component {
     public homeButtonNode: Node;
     @property({type: Node})
     public githubButtonNode: Node;
+    @property({type: Node})
+    public achievementButtonNode: Node;
 
     @property({type: StartMenuPanel})
     public startMenuPanel: StartMenuPanel;
+
+    @property({type: AchievementPanel})
+    public achievementPanel: AchievementPanel;
 
     @property({type: SelectTalentPanel})
     public selectTalentPanel: SelectTalentPanel;
@@ -61,6 +67,7 @@ export class GameManager extends Component {
             this.saveButtonNode.active = true;
             this.homeButtonNode.active = false;
             this.githubButtonNode.active = true;
+            this.achievementButtonNode.active = true;
         });
         
         eventMsg.on(Message.StartGame, ()=> {
@@ -69,6 +76,7 @@ export class GameManager extends Component {
             this.saveButtonNode.active = false;
             this.homeButtonNode.active = true;
             this.githubButtonNode.active = false;
+            this.achievementButtonNode.active = false;
             this.openSelectTalentPanel();
         });
 
@@ -85,6 +93,7 @@ export class GameManager extends Component {
 
         eventMsg.on(Message.Replay, ()=> {
             this.lifeTrackPanel.hide();
+            lifeMgr.times++;
             this.openSelectTalentPanel();
         });
 
@@ -166,5 +175,9 @@ export class GameManager extends Component {
 
     public onGithubButtonClicked() {
         sys.openURL("https://github.com/gameall3d/LifeRestart_Cocos");
+    }
+
+    public onOpenAchievementButtonClicked() {
+        this.achievementPanel.show();
     }
 }
